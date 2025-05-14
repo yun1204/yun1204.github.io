@@ -1,0 +1,84 @@
+/* 1. 讓 header container 變成相對定位，當作參考框 */
+header .container {
+    position: relative;        /* 設定此元素為參考定位框，用於絕對定位的子元素 */  
+    width: 100%;               /* 寬度佔滿父元素（通常是整個 viewport 或 header） */  
+    height: 4rem;              /* 固定高度為 4rem，方便後面做垂直置中 */  
+    display: flex;             /* 啟用 Flexbox，便於內部元素對齊 */  
+    align-items: center;       /* 將 flex 內的子元素做垂直置中 */  
+}
+
+/* 2. 導覽列改為絕對定位到右上，並維持垂直置中 */
+header nav {
+    position: absolute;        /* 從文檔流中移除，依照參考框定位 */  
+    top: 50%;                  /* 距離參考框頂部 50% */  
+    right: 0;                  /* 距離參考框右側 0（緊貼右邊） */  
+    transform: translateY(-50%); /* 往上位移自身高度的 50%，完成垂直置中 */  
+}
+
+/* 3. nav 裡面的 ul 保持水平排版 */
+header nav ul {
+    list-style: none;          /* 移除預設的圓點清單樣式 */  
+    display: flex;             /* 啟用 Flexbox，讓 li 水平排列 */  
+    gap: 1.5rem;               /* li 之間水平間距 1.5rem */  
+}
+
+/* —— 主題網格 —— */
+.topics {
+    padding: 3rem 0;           /* 上下各留 3rem 的內邊距 */  
+    background-color: #fff;    /* 背景改為純白 */  
+}
+
+.topics .container {
+    max-width: 1000px;         /* 最大寬度避免內容過長 */  
+    margin: 0 auto;            /* 左右自動外邊距置中 */  
+}
+
+.topics h2 {
+    text-align: center;        /* 文字置中 */  
+    margin-bottom: 2rem;       /* 下方外邊距 2rem */  
+    font-size: 1.6rem;         /* 字型大小 1.6rem */  
+    color: #2c3e50;            /* 深灰藍色文字 */  
+}
+
+/* 3×2 網格 */
+.topics-grid {
+    display: grid;                         /* 啟用 CSS Grid 排版 */  
+    grid-template-columns: repeat(2, 1fr); /* 兩欄，每欄平分剩餘空間 */  
+    grid-auto-rows: 1fr;                   /* 每一列高度相同，平分剩餘空間 */  
+    gap: 1.5rem;                           /* 網格間距 1.5rem */  
+}
+
+/* 每張主題卡 */
+.topics-grid a {
+    display: flex;               /* 卡片內仍可用 Flexbox 排版（上下佈局） */  
+    flex-direction: column;      /* 子元素垂直堆疊 */  
+    text-decoration: none;       /* 移除連結底線 */  
+    color: inherit;              /* 繼承文字顏色 */  
+    overflow: hidden;            /* 隱藏超出邊界的內容 */  
+    border-radius: 12px;         /* 四角圓角 12px */  
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 輕微陰影 */  
+    transition: transform .2s, box-shadow .2s; /* hover 動畫過渡 */  
+}
+
+.topics-grid a:hover {
+    transform: translateY(-4px); /* 滑鼠移上微微向上位移 */  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 加深陰影 */  
+}
+
+/* 圖片 1:1 比例、覆蓋整張卡片寬度 */
+.topics-grid img {
+    width: 100%;                /* 橫向填滿卡片 */  
+    aspect-ratio: 1 / 1;        /* 強制保持 1:1 正方形 */  
+    object-fit: cover;          /* 讓圖片裁切填滿框，保持比例 */  
+    border-bottom: 1px solid #eee; /* 圖片和文字間的分隔線 */  
+}
+
+/* 主題文字 */
+.topics-grid span {
+    font-size: 25px;            /* 文字大小 25px */  
+    display: block;             /* 讓 span 可設定寬高與內邊距 */  
+    padding: 0.75rem;           /* 內邊距 0.75rem */  
+    text-align: center;         /* 文字置中 */  
+    font-weight: 500;           /* 中等粗細 */  
+    background-color: #fdfcf9;  /* 淡米色背景 */  
+}

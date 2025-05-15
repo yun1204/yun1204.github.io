@@ -82,3 +82,78 @@ header nav ul {
     font-weight: 500;           /* 中等粗細 */  
     background-color: #fdfcf9;  /* 淡米色背景 */  
 }
+/* —— 子主題列表 —— */
+.subtopics h2 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    color: #2c3e50;
+  }
+  .subtopics-grid {
+    display: grid;
+    grid-template-columns: 1fr; ;
+    gap: 1rem;
+  }
+  .subtopics-grid a {
+    display: block;
+    padding: 1rem;
+    background-color: #fdfcf9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .2s, transform .2s;
+  }
+  .subtopics-grid a:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+  }
+  @media (max-width: 600px) {
+    .subtopics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* 整體頁面佈局 */
+.page-wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  /* 側邊欄 */
+  .sidebar {
+    width: 200px;               /* 固定寬度 */
+    padding: 1rem;
+    background-color: #fdfcf9;  /* 側欄背景色 */
+  }
+  .subtopics-nav a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+  .subtopics-nav a:hover {
+    background-color: #ece7dd;
+  }
+  
+  /* 內容區 */
+  .content {
+    flex-grow: 1;               /* 剩餘空間都給內容區 */
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  /* 響應式：手機一欄 */
+  @media (max-width: 800px) {
+    .page-wrapper {
+      flex-direction: column;
+    }
+    .sidebar {
+      width: 100%;
+    }
+  }
+  

@@ -26,22 +26,23 @@
       <!-- 側邊欄：主題列表放左側 -->
       <aside class="sidebar">
         <h2>文化節慶</h2>
-        <nav class="subtopics-nav">
-          <a href="short1.html">除夕</a>
-          <a href="short2.html">春節</a>
-          <a href="short3.html">元宵節</a>
-          <a href="short4.html">清明節</a>
-          <a href="short5.html">端午節</a>
-          <a href="short6.html">中元節</a>
-          <a href="short7.html">中秋節</a>
-          <a href="short8.html">冬至</a>
-          <a href="short9.html">七夕</a>
-          <a href="short10.html">228紀念日</a>
+        <nav id="sidebar-nav" class="subtopics-nav">
+          <a href="#" data-topic="fest1">除夕</a>
+          <a href="#" data-topic="fest2">春節</a>
+          <a href="#" data-topic="fest3">元宵節</a>
+          <a href="#" data-topic="fest4">清明節</a>
+          <a href="#" data-topic="fest5">端午節</a>
+          <a href="#" data-topic="fest6">中元節</a>
+          <a href="#" data-topic="fest7">中秋節</a>      <!-- 這一項會載入你提供的課文 -->
+          <a href="#" data-topic="fest8">冬至</a>
+          <a href="#" data-topic="fest9">七夕</a>
+          <a href="#" data-topic="fest10">228紀念日</a>
         </nav>
       </aside>
+
       <!-- 內容區：中間顯示課文 -->
-      <section class="content">
-        <!-- 這裡放置對應的課文內容 -->
+       <section id="content" class="content">
+          <h2>請從左側選擇一個主題</h2>
       </section>
     </div>
   </main>
@@ -49,5 +50,34 @@
   <footer>
     <p>&copy; 2025 遇見華語｜版權所有</p>
   </footer>
+
+  <script>
+    // 各主題對應的課文內容
+    const contentMap = {
+      fest7: `
+        <h2>中秋節的故事與習俗</h2>
+        <p>中秋節是中國重要的傳統節日，每年農曆八月十五日，家人會團聚，共度佳節。這一天的月亮又大又圓，象徵團圓與幸福，因此也叫「團圓節」。</p>
+        <p>中秋節的起源與嫦娥奔月的故事有關。傳說很久以前，后羿射下九個太陽，拯救了受苦的百姓。他得到了一顆仙藥，能讓人長生不老。嫦娥為了不讓壞人偷走仙藥，自己吃了後飛到月亮，住在廣寒宮。從此，每到中秋節，人們會賞月，想念嫦娥。</p>
+        <p>中秋節有許多習俗，最有名的是賞月和吃月餅。家人會一起在院子或陽台欣賞明亮的月亮，互相分享月餅，象徵團圓與祝福。此外，人們也會送禮給親朋好友，表達感謝與關心。</p>
+      `,
+      // 其餘主題可依照需要新增 fest1~fest10
+    };
+
+    const sidebar = document.getElementById('sidebar-nav');
+    const content = document.getElementById('content');
+
+    sidebar.addEventListener('click', e => {
+      const link = e.target.closest('a[data-topic]');
+      if (!link) return;
+      e.preventDefault();
+
+      // 切換 active 樣式
+      sidebar.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+
+      const key = link.dataset.topic;
+      content.innerHTML = contentMap[key] || '<p>此主題尚未有內容。</p>';
+    });
+  </script>
 </body>
 </html>

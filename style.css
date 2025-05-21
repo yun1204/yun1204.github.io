@@ -139,16 +139,38 @@ header nav ul {
   }
   
   /* 內容區 */
-  .content {
-    flex-grow: 1;               /* 剩餘空間都給內容區 */
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  /* 響應式：手機一欄 */
-  @media (max-width: 800px) {
+ /* —— 課文內容區優化（保留原有邊框寬度） —— */
+/* —— 強制讓 .content 邊框維持原寬度，並放大文字 —— */
+.content {
+  /* 移除任何寬度限制與置中設定 */
+  max-width: none !important;
+  margin: 0 !important;
+
+  /* 保持原本填滿剩餘空間 */
+  flex-grow: 1;
+
+  /* 內邊距與外觀 */
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+  /* 更大字級 */
+  font-size: 1.25rem;    /* 約 20px */
+  line-height: 1.8;
+}
+
+.content p {
+  margin-bottom: 1.2rem;
+}
+
+.content h2 {
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+}
+
+   /* 響應式：手機一欄 */
+   @media (max-width: 800px) {
     .page-wrapper {
       flex-direction: column;
     }
@@ -156,4 +178,61 @@ header nav ul {
       width: 100%;
     }
   }
-  
+
+/* —— 文字集中一點 —— */
+.content {
+  /* 保持原本外框設定 */
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+/* 讓標題和段落集中在中間，行寬不超過 700px */
+.content > * {
+  max-width: 700px;
+  margin: 0 auto 1.2rem;
+}
+
+/* 標題底部間距單獨調整 */
+.content h2 {
+  margin-bottom: 1.8rem;
+}
+/* —— 标题与课文左对齐，正文再放大 —— */
+.content {
+  /* 保持原本外框与间距设置 */
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+  /* 正文字体调大 */
+  font-size: 1.375rem;  /* 约 22px */
+  line-height: 1.8;
+}
+
+/* 限制行宽、置中容器，但文字左对齐 */
+.content > * {
+  max-width: 700px;
+  margin: 0 auto 1.2rem;
+  text-align: left;     
+}
+
+/* 标题大小与间距 */
+.content h2 {
+  font-size: 2.25rem;    /* 约 36px */
+  margin-bottom: 1.8rem;
+  text-align: left;      /* 确保标题左对齐 */
+}
+/* —— 只讓主標題置中 —— */
+.content > h2 {
+  text-align: center !important;
+}
+/* —— 往右微調中標題 —— */
+.content > h2 {
+  text-align: center;        /* 保持置中 */
+  position: relative;        /* 啟用相對定位 */
+  left: 45px;                /* 向右偏移 20px（可視需求微調） */
+}

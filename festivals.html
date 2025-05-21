@@ -54,14 +54,261 @@
   <script>
     // 各主題對應的課文內容
     const contentMap = {
+      fest1: `
+      <h2>除夕的家庭團聚</h2>
+      <p>小美：媽媽，今天晚上我們有什麼特別的
+         <span class="vocab" data-pinyin="ānpái" data-meaning="arrange">
+         <a href="vocab-practice.html#安排">安排</a>
+        </span>
+        ？</p>
+      <p>媽媽：我們要準備年夜飯，等爸爸回來就一起開始。你可以幫我包餃子。</p>
+      <p>小美：太好了！今年的菜單有什麼？</p>
+      <p>媽媽：
+        <span class="grammar" data-meaning="除了…還：not only … but also">
+         <a href="grammar-practice.html#chule-hai">除了</a>
+        </span>
+        魚和雞以外，
+        <span class="grammar" data-meaning="除了…還：not only … but also">
+         <a href="grammar-practice.html#chule-hai">還</a>
+        </span>
+        會做一道糖醋排骨，爺爺最喜歡吃。</p>
+      <p>小美：我也很
+        <span class="vocab" data-pinyin="qīdài" data-meaning="look forward to">
+        <a href="vocab-practice.html#期待">期待</a>
+        </span>
+        晚上的
+        <span class="vocab" data-pinyin="chúxī" data-meaning="New Year's Eve">
+     <a href="vocab-practice.html#除夕">除夕</a>
+        </span>
+        晚會，
+        <span class="grammar" data-meaning="一邊…一邊：do … while …">
+         <a href="grammar-practice.html#yibian-yibian">一邊</a>
+        </span>
+        吃水果，
+        <span class="grammar" data-meaning="一邊…一邊：do … while …">
+         <a href="grammar-practice.html#yibian-yibian">一邊</a>
+        </span>
+        欣賞
+        <span class="vocab" data-pinyin="biǎoyǎn" data-meaning="performance">
+         <a href="vocab-practice.html#表演">表演</a>
+        </span>
+        。</p>
+      <p>媽媽：吃完飯後別忘了向長輩
+        <span class="vocab" data-pinyin="bàinián" data-meaning="pay New Year’s greetings">
+         <a href="vocab-practice.html#拜年">拜年</a>
+        </span>
+        ，他們會給你
+         <span class="vocab" data-pinyin="hóngbāo" data-meaning="red envelope">
+         <a href="vocab-practice.html#紅包">紅</a>
+        </span>
+        包。</p>
+      <p>小美：我已經準備好祝福的話了，希望大家新的一年
+        <span class="vocab" data-pinyin="píngān" data-meaning="safe and sound">
+         <a href="vocab-practice.html#平安">平安</a>
+        </span>
+        健康。</p>
+      <p>媽媽：很好。等一下我們也要
+         <span class="vocab" data-pinyin="tiē" data-meaning="paste">
+         <a href="vocab-practice.html#貼">貼</a>
+        </span>
+        <span class="vocab" data-pinyin="chūnlián" data-meaning="Spring Festival couplets">
+         <a href="vocab-practice.html#春聯">春聯</a>
+        </span>
+        ，
+        <span class="grammar" data-meaning="把：把字句">
+         <a href="grammar-practice.html#ba-structure">把</a>
+        </span>
+        家裡佈置得喜氣一點。</p>
+      <p>小美：我最喜歡貼春聯了，感覺特別有過年的
+        <span class="vocab" data-pinyin="qìfēn" data-meaning="atmosphere">
+         <a href="vocab-practice.html#氣氛">氣氛</a>
+        </span>
+        ！</p>
+      <p>媽媽：對，過年最重要的是一家人團聚在一起，開開心心過節。</p>
+    `,  // 記得逗號
+
+      fest2: `
+        <h2>春節習俗你知道嗎？</h2>
+          <p> 小偉：麗麗，你知道我們家
+            <span class="vocab" data-pinyin="Chūnjié" data-meaning="Spring Festival">
+        <a href="vocab-practice.html#春節">春節</a>
+        </span>
+        最
+        <span class="vocab" data-pinyin="zhòngshì" data-meaning="value; regard highly">
+        <a href="vocab-practice.html#重視">重視</a>
+        </span>
+        什麼嗎？</p>
+          <p> 麗麗：拜祖先嗎？我聽說有些家庭會在除夕或
+            <span class="vocab" data-pinyin="chūyī" data-meaning="the first (day of lunar month)">
+        <a href="vocab-practice.html#初一">初一</a>
+        </span>
+        早上祭拜祖先。</p>
+          <p>小偉：沒錯，我們會準備水果、
+            <span class="vocab" data-pinyin="niángāo" data-meaning="rice cake">
+        <a href="vocab-practice.html#年糕">年糕</a>
+        </span>
+        和雞肉，
+         <span class="grammar" data-meaning="向：indicate direction/target"><a href="grammar-practice.html#xiang">向</a>
+        </span>
+        祖先表示感謝和敬意。</p>
+          <p>麗麗：我們家比較重視初一
+            <span class="vocab" data-pinyin="bàinián" data-meaning="pay New Year’s greetings">
+        <a href="vocab-practice.html#拜年">拜年</a>
+        </span>
+        。爸爸媽媽會帶我去
+        <span class="vocab" data-pinyin="qīnqi" data-meaning="relatives">
+        <a href="vocab-practice.html#親戚">親戚</a>
+        </span>
+        家
+         <span class="vocab" data-pinyin="bàifǎng" data-meaning="visit">
+        <a href="vocab-practice.html#拜訪">拜訪</a>
+        </span>
+        長輩。</p>
+          <p>小偉：你會說吉祥話嗎？</p>
+          <p>麗麗：當然會，我每年都說「
+            <span class="vocab" data-pinyin="gōngxǐ" data-meaning="congratulate">
+        <a href="vocab-practice.html#恭喜">恭喜</a>
+        </span>
+        <span class="vocab" data-pinyin="fācái" data-meaning="prosper; get rich">
+        <a href="vocab-practice.html#發財">發財</a>
+        </span>
+        」、「萬事如意」，這樣比較有
+        <span class="vocab" data-pinyin="lǐmào" data-meaning="polite; manners">
+        <a href="vocab-practice.html#禮貌">禮貌</a>
+        </span>
+        。</p>
+          <p>小偉：我還聽說
+            <span class="vocab" data-pinyin="Chūnjié" data-meaning="Spring Festival">
+        <a href="vocab-practice.html#春節">春節</a>
+        </span>
+        有些禁忌，比如說不能
+        <span class="vocab" data-pinyin="sǎodì" data-meaning="sweep the floor">
+        <a href="vocab-practice.html#掃地">掃地</a>
+        </span>
+        ，會把
+        <span class="vocab" data-pinyin="hǎoyùn" data-meaning="good luck">
+        <a href="vocab-practice.html#好運">好運</a>
+        </span>
+        掃走。</p>
+          <p>麗麗：對，
+            <span class="grammar" data-meaning="而且：moreover/and">
+        <a href="grammar-practice.html#erqie">而且</a>
+        </span>
+        也不要說不吉利的話，像「
+            <span class="vocab" data-pinyin="sǐ" data-meaning="die">
+        <a href="vocab-practice.html#死">死</a>
+        </span>
+        」或「壞」，
+        <span class="grammar" data-meaning="不太：not too">
+        <a href="grammar-practice.html#butai">不太</a>
+        </span>
+        合適。</p>
+          <p>小偉：
+            <span class="vocab" data-pinyin="Chūnjié" data-meaning="Spring Festival">
+        <a href="vocab-practice.html#春節">春節</a>
+        </span>
+        真的不只是
+        <span class="vocab" data-pinyin="fàngjià" data-meaning="have a holiday">
+        <a href="vocab-practice.html#放假">放假</a>
+        </span>
+        ，而是
+        <span class="vocab" data-pinyin="chōngmǎn" data-meaning="full of">
+        <a href="vocab-practice.html#充滿">充滿</a>
+        </span>
+        傳統文化和家庭情感的節日。</p>
+           `, 
+
+           fest3: `
+           <h2>元宵節要開始了！</h2>
+            <p>安琪：凱文，學校後天有元宵燈會，你要不要一起去？</p>
+            <p>凱文：我聽說了！這次的燈會不但有創意花燈，而且還能現場體驗做湯圓。</p>
+            <p>安琪：對啊，還有猜燈謎比賽喔！如果得獎，學校會送禮券。</p>
+            <p>凱文：真的？那我得好好準備一下。不過……要是下雨，活動就麻煩了。</p>
+            <p>安琪：別擔心，學校已經準備了室內空間。就算天氣不好，也不影響燈展。</p>
+            <p>凱文：太好了！我上次在台南參觀燈會的時候，差點被人潮擠到走不動。</p>
+            <p>安琪：元宵節每年都這麼熱鬧，尤其是週末，人越晚越多。</p>
+            <p>凱文：嗯，我們早點去卡位，這樣比較不會錯過重頭戲！</p>
+             `, 
+             
       fest7: `
         <h2>中秋節的故事與習俗</h2>
-        <p>中秋節是中國重要的傳統節日，每年農曆八月十五日，家人會團聚，共度佳節。這一天的月亮又大又圓，象徵團圓與幸福，因此也叫「團圓節」。</p>
-        <p>中秋節的起源與嫦娥奔月的故事有關。傳說很久以前，后羿射下九個太陽，拯救了受苦的百姓。他得到了一顆仙藥，能讓人長生不老。嫦娥為了不讓壞人偷走仙藥，自己吃了後飛到月亮，住在廣寒宮。從此，每到中秋節，人們會賞月，想念嫦娥。</p>
-        <p>中秋節有許多習俗，最有名的是賞月和吃月餅。家人會一起在院子或陽台欣賞明亮的月亮，互相分享月餅，象徵團圓與祝福。此外，人們也會送禮給親朋好友，表達感謝與關心。</p>
-      `,
-      // 其餘主題可依照需要新增 fest1~fest10
-    };
+        <p>中秋節是中國重要的傳統節日，每年農曆八月十五日，家人會團聚，共度佳節。這一天的
+           <span class="vocab" data-pinyin="yuèliàng" data-meaning="moon">
+      <a href="vocab-practice.html#月亮">月亮</a>
+        </span>
+        又大又圓，象徵團圓 
+        <span class="grammar">
+    <a href="grammar-practice.html#yu">與</a>
+  </span>
+  幸福， 
+  <span class="grammar">
+    <a href="grammar-practice.html#yinci">因此</a>
+  </span>
+  也叫「團圓節」。</p>
+        <p>中秋節的起源與嫦娥奔月的故事
+          <span class="vocab" data-pinyin="yǒuguān" data-meaning="related to">
+      <a href="vocab-practice.html#有關">有關</a>
+      </span>
+      。
+      <span class="vocab" data-pinyin="chuánshuō" data-meaning="legend; myth">
+      <a href="vocab-practice.html#傳說">傳說</a>
+    </span>
+    很久以前，后羿射下九個
+     <span class="vocab" data-pinyin="tàiyáng" data-meaning="sun">
+      <a href="vocab-practice.html#太陽">太陽</a>
+    </span>
+    ，拯救了受苦的百姓。他
+    <span class="vocab" data-pinyin="dédào" data-meaning="obtain">
+      <a href="vocab-practice.html#得到">得到</a>
+    </span>
+    了一顆仙藥，能
+    <span class="grammar">
+    <a href="grammar-practice.html#rang">讓</a>
+    </span>
+    人長生不老。嫦娥為了不讓壞人偷走仙藥，自己吃了後飛到月亮，住在廣寒宮。從此，每到中秋節，
+    <span class="vocab" data-pinyin="rénmen" data-meaning="people">
+      <a href="vocab-practice.html#人們">人們</a>
+    </span>
+    會賞月，
+     <span class="vocab" data-pinyin="xiǎngniàn" data-meaning="miss; long for">
+      <a href="vocab-practice.html#想念">想念</a>
+    </span>
+    嫦娥。</p>
+        <p>中秋節有
+          <span class="vocab" data-pinyin="xǔduō" data-meaning="many">
+      <a href="vocab-practice.html#許多">許多</a>
+    </span>
+    習俗，最有名的是賞月和吃
+     <span class="vocab" data-pinyin="yuèbǐng" data-meaning="moon cake">
+      <a href="vocab-practice.html#月餅">月餅</a>
+    </span>
+    。家人會一起在
+    <span class="vocab" data-pinyin="yuànzi" data-meaning="courtyard">
+      <a href="vocab-practice.html#院子">院子</a>
+    </span>
+    或陽台
+    <span class="vocab" data-pinyin="xīnshǎng" data-meaning="enjoy; appreciate">
+      <a href="vocab-practice.html#欣賞">欣賞</a>
+    </span>
+    明亮的月亮，
+    <span class="vocab" data-pinyin="hùxiāng" data-meaning="mutually">
+      <a href="vocab-practice.html#互相">互相</a>
+    </span>
+     <span class="vocab" data-pinyin="fēnxiǎng" data-meaning="share">
+      <a href="vocab-practice.html#分享">分享</a>
+    </span>
+    月餅，象徵團圓與祝福。此外，人們也會送禮給親朋好友，
+    <span class="vocab" data-pinyin="biǎodá" data-meaning="express">
+      <a href="vocab-practice.html#表達">表達</a>
+    </span>
+    感謝與
+    <span class="vocab" data-pinyin="guānxīn" data-meaning="care; concern">
+      <a href="vocab-practice.html#關心">關心</a>
+    </span>
+    。</p>
+      `
+      // 其他 fest2～fest6、fest8～fest10
+  };
 
     const sidebar = document.getElementById('sidebar-nav');
     const content = document.getElementById('content');

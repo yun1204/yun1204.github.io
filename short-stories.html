@@ -21,33 +21,195 @@
     </div>
   </header>
 
-    <main class="subtopics">
+  <main class="subtopics">
     <div class="container page-wrapper">
-    <aside class="sidebar">
-    <h2>短篇故事 - 選擇主題</h2>
-    <div class="subtopics-grid">
-    <!-- 以下列出 10 個子主題連結 -->
-    <a href="short1.html"><span>主題 1</span></a>
-    <a href="short2.html"><span>主題 2</span></a>
-    <a href="short3.html"><span>主題 3</span></a>
-    <a href="short4.html"><span>主題 4</span></a>
-    <a href="short5.html"><span>主題 5</span></a>
-    <a href="short6.html"><span>主題 6</span></a>
-    <a href="short7.html"><span>主題 7</span></a>
-    <a href="short8.html"><span>主題 8</span></a>
-    <a href="short9.html"><span>主題 9</span></a>
-    <a href="short10.html"><span>主題 10</span></a>
+      <!-- 側邊欄：主題列表放左側 -->
+      <aside class="sidebar">
+        <h2>短篇故事</h2>
+        <nav id="sidebar-nav" class="subtopics-nav">
+          <a href="#" data-topic="fest1">周末一起去動物園</a>
+          <a href="#" data-topic="fest2">走失的多多</a>
+          <a href="#" data-topic="fest3">阿姨的旅行日記</a>
+          <a href="#" data-topic="fest4">神奇的雨傘</a>
+          <a href="#" data-topic="fest5">爺爺的風箏</a>
+          <a href="#" data-topic="fest6">會唱歌的杯子</a>
+          <a href="#" data-topic="fest7">變色石頭</a>      
+          <a href="#" data-topic="fest8">從月球來的機器人</a>
+          <a href="#" data-topic="fest9">影子朋友</a>
+          <a href="#" data-topic="fest10">星星與月亮</a>
+        </nav>
+      </aside>
+
+      <!-- 內容區：中間顯示課文 -->
+       <section id="content" class="content">
+          <h2>請從左側選擇一個主題</h2>
+      </section>
     </div>
-    </aside>
-    <section class="content">
-    </section>
-    </div>
-    </main>
+  </main>
 
   <footer>
     <p>&copy; 2025 遇見華語｜版權所有</p>
   </footer>
+
+  <script>
+    // 各主題對應的課文內容
+    const contentMap = {
+      fest1: `
+      <h2>周末一起去動物園</h2>
+      <p>（在學校裡，王明和小美在討論週末的活動。）</p>
+      <p> 王明：小美，這個週末你有空嗎？</p>
+      <p>小美：有啊！怎麼了？</p>
+      <p>王明：我想去
+        <span class="vocab" data-pinyin="dòng wù yuán" data-meaning="zoo">
+         <a href="vocab-practice.html#動物園">動物園</a>
+        </span>
+        看看
+        <span class="vocab" data-pinyin="cháng jǐng lù" data-meaning="giraffe">
+         <a href="vocab-practice.html#長頸鹿">長頸鹿</a>
+        </span>
+        和大象，你要一起去嗎？</p>
+        <p>小美：聽起來不錯！
+          <span class="vocab" data-pinyin="dòng wù yuán" data-meaning="zoo">
+         <a href="vocab-practice.html#動物園">動物園</a>
+        </span>
+        在哪裡？</p>
+        <p>王明：在市中心的文化公園附近，我們可以
+          <span class="vocab" data-pinyin="dā" data-meaning="take (MRT) / ride">
+         <a href="vocab-practice.html#搭">搭</a>
+        </span>
+        <span class="vocab" data-pinyin="jié yùn" data-meaning="MRT">
+         <a href="vocab-practice.html#捷運">捷運</a>
+        </span>
+        去。</p>
+        <p>小美：好啊，那我們幾點
+          <span class="vocab" data-pinyin="jí hé" data-meaning="gather / gathering">
+         <a href="vocab-practice.html#集合">集合</a>
+        </span>
+        ？</p>
+        <p>王明：早上九點，在
+          <span class="vocab" data-pinyin="jié yùn" data-meaning="MRT">
+         <a href="vocab-practice.html#捷運">捷運</a>
+        </span>
+        站門口見。</p>
+        <p>小美：要帶什麼東西嗎？</p>
+        <p> 王明：可以帶水、午餐和
+          <span class="vocab" data-pinyin="xiàng jī" data-meaning="camera">
+         <a href="vocab-practice.html#相機">相機</a>
+        </span>
+        。那裡有很多
+        <span class="vocab" data-pinyin="kě ài" data-meaning="cute / adorable">
+         <a href="vocab-practice.html#可愛">可愛</a>
+        </span>
+        的動物，一定很好
+        <span class="vocab" data-pinyin="pāi" data-meaning="take (a photo) / shoot">
+         <a href="vocab-practice.html#拍">拍</a>
+        </span>
+        ！</p>
+        <p>小美：我最喜歡
+          <span class="vocab" data-pinyin="hóu zi" data-meaning="monkey">
+         <a href="vocab-practice.html#猴子">猴子</a>
+        </span>
+        ，希望牠們會在外面
+        <span class="vocab" data-pinyin="huó dòng" data-meaning="activity / event">
+         <a href="vocab-practice.html#活動">活動</a>
+        </span>
+        。</p>
+        <p>王明：天氣應該很晴朗，不會下雨。</p>
+        <p>小美：太好了！那星期六見！</p>
+            `, 
+      fest2: `
+        <h2>走失的多多</h2>
+        <p>有一天，小文在回家的路上，發現一隻小狗坐在公園的椅子下。小狗看起來又
+          <span class="vocab" data-pinyin="zāng" data-meaning="dirty">
+         <a href="vocab-practice.html#髒">髒</a>
+        </span>
+        又餓，好像已經迷路了。小文很喜歡動物，他決定先帶小狗回家。</p>
+        <p>回到家後，小文幫牠
+          <span class="vocab" data-pinyin="xǐ zǎo" data-meaning="take a bath / bathe">
+         <a href="vocab-practice.html#洗澡">洗澡</a>
+        </span>
+        、
+        <span class="vocab" data-pinyin="cā gān" data-meaning="dry off / wipe dry">
+         <a href="vocab-practice.html#擦乾">擦乾</a>
+        </span>
+        ，還拿出一些
+        <span class="vocab" data-pinyin="shí wù" data-meaning="food">
+         <a href="vocab-practice.html#食物">食物</a>
+        </span>
+        給牠吃。小狗一邊吃，一邊搖尾巴，看起來很開心。媽媽看到後說：「我們可以幫牠找主人，也可以先照顧牠幾天。」</p>
+        <p>小文在網路上貼了小狗的照片，希望有人來
+          <span class="vocab" data-pinyin="rèn lǐng" data-meaning="claim / adopt">
+         <a href="vocab-practice.html#認領">認領</a>
+        </span>
+        。三天後，一位老先生打電話來，他的聲音聽起來很
+        <span class="vocab" data-pinyin="zhāo jí" data-meaning="anxious / worried">
+         <a href="vocab-practice.html#著急">著急</a>
+        </span>
+        ，說他的小狗不見了好幾天。</p>
+        <p>老先生來到小文家，一看到小狗就哭了出來。
+          <span class="vocab" data-pinyin="yuán lái" data-meaning="originally / it turns out">
+         <a href="vocab-practice.html#原來">原來</a>
+        </span>
+        這隻小狗叫「多多」，已經十歲了。小文把多多交給老先生，心裡雖然有點捨不得，但他知道，讓多多
+        <span class="vocab" data-pinyin="huí jiā" data-meaning="go home / return home">
+         <a href="vocab-practice.html#回家">回家</a>
+        </span>
+        是最好的選擇。</p>
+        <p>從那天起，小文更喜歡幫助別人和
+          <span class="vocab" data-pinyin="zhào gù" data-meaning="take care of / care for">
+         <a href="vocab-practice.html#照顧">照顧</a>
+        </span>
+        動物。他希望以後也可以當一位動物醫生。</p>
+      `,
+fest3: `
+  <h2>阿姨的旅行日記</h2>
+  <p>（這裡是故事內容）</p>
+`,
+
+fest4: `
+  <h2>神奇的雨傘</h2>
+  <p>（這裡是故事內容）</p>
+`,
+fest5: `
+  <h2>爺爺的風箏</h2>
+  <p>（這裡是故事內容）</p>
+`,
+fest6: `
+  <h2>會唱歌的杯子</h2>
+  <p>（這裡是故事內容）</p>
+`,
+fest7: `
+  <h2>變色石頭</h2>
+  <p>（這裡是故事內容）</p>
+`,
+fest8: `
+  <h2>從月球來的機器人</h2>
+  <p>（這裡是故事內容）</p>
+`,
+fest9: `
+  <h2>影子朋友</h2>
+  <p>（這裡是故事內容）</p>
+`,
+fest10: `
+  <h2>星星與月亮</h2>
+  <p>（這裡是故事內容）</p>
+`,
+      }; 
+      const sidebar = document.getElementById('sidebar-nav');
+    const content = document.getElementById('content');
+
+    sidebar.addEventListener('click', e => {
+      const link = e.target.closest('a[data-topic]');
+      if (!link) return;
+      e.preventDefault();
+
+      // 切換 active 樣式
+      sidebar.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+
+      const key = link.dataset.topic;
+      content.innerHTML = contentMap[key] || '<p>此主題尚未有內容。</p>';
+    });
+  </script>
 </body>
 </html>
-
-<!-- 注意：其他五個主題頁面請將 <title>與主標改為對應「寓言故事」、「日常生活」、「文化節慶」、「旅遊」、「社會議題」，並替換子連結與檔名 -->

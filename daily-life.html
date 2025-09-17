@@ -26,28 +26,201 @@
       <!-- 側邊欄：主題列表放左側 -->
       <aside class="sidebar">
         <h2>日常生活</h2>
-        <nav class="subtopics-nav">
-          <a href="short1.html">主題 1</a>
-          <a href="short2.html">主題 2</a>
-          <a href="short3.html">主題 3</a>
-          <a href="short4.html">主題 4</a>
-          <a href="short5.html">主題 5</a>
-          <a href="short6.html">主題 6</a>
-          <a href="short7.html">主題 7</a>
-          <a href="short8.html">主題 8</a>
-          <a href="short9.html">主題 9</a>
-          <a href="short10.html">主題 10</a>
+        <nav id="sidebar-nav" class="subtopics-nav">
+          <a href="#" data-topic="fest1">搬家了</a>
+          <a href="#" data-topic="fest2">週末大掃除</a>
+          <a href="#" data-topic="fest3">搭公車上學</a>
+          <a href="#" data-topic="fest4">去超市買東西</a>
+          <a href="#" data-topic="fest5">整理書包</a>
+          <a href="#" data-topic="fest6">網購衣服</a>
+          <a href="#" data-topic="fest7">看牙醫</a>
+          <a href="#" data-topic="fest8">忘記帶東西</a>
+          <a href="#" data-topic="fest9">寄包裹</a>
+          <a href="#" data-topic="fest10">打電話訂餐</a>
         </nav>
       </aside>
       <!-- 內容區：中間顯示課文 -->
-      <section class="content">
-        <!-- 這裡放置對應的課文內容 -->
-      </section>
+      <section id="content" class="content">
+        <h2>請從左側選擇一個主題</h2>
+    </section>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 遇見華語｜版權所有</p>
   </footer>
+  <script>
+    // 各主題對應的課文內容
+    const contentMap = {
+      fest1: `
+      <h2>搬家了</h2>
+      <p>媽媽：明明，今天是我們
+        <span class="vocab" data-pinyin="bān jiā" data-meaning="to move (house)">
+         <a href="vocab-practice.html#搬家">搬家</a>
+        </span>
+        的第一天，你覺得這裡怎麼樣？</p>
+      <p>明明：這裡的
+        <span class="vocab" data-pinyin="huán jìng" data-meaning="environment">
+         <a href="vocab-practice.html#環境">環境</a>
+        </span>
+        很好，
+        <span class="vocab" data-pinyin="gōng yuán" data-meaning="park">
+         <a href="vocab-practice.html#公園">公園</a>
+        </span>
+        就在
+        <span class="vocab" data-pinyin="lóu xià" data-meaning="downstairs">
+         <a href="vocab-practice.html#樓下">樓下</a>
+        </span>
+        ，超方便的！</p>
+      <p>媽媽：是啊，而且
+        <span class="vocab" data-pinyin="chāo shì" data-meaning="supermarket">
+         <a href="vocab-practice.html#超市">超市</a>
+        </span>
+        就在
+        <span class="vocab" data-pinyin="duì miàn" data-meaning="across from">
+         <a href="vocab-practice.html#對面">對面</a>
+        </span>
+        ，買東西也很方便。</p>
+      <p>明明：我的
+        <span class="vocab" data-pinyin="fáng jiān" data-meaning="room">
+         <a href="vocab-practice.html#房間">房間</a>
+        </span>
+        <span class="grammar" data-meaning="跟/和...比起來：compared with …">
+         <a href="grammar-practice.html#gēn/hé...bǐ qǐ lái">跟</a>
+        </span>
+        以前
+        <span class="grammar" data-meaning="跟/和...比起來：compared with …">
+         <a href="grammar-practice.html#gēn/hé...bǐ qǐ lái">比起來</a>
+        </span>
+        大多了，還有
+        <span class="vocab" data-pinyin="yáng tái" data-meaning="balcony">
+         <a href="vocab-practice.html#陽台">陽台</a>
+        </span>
+        ，我可以在那裡看書。</p>
+      <p>明明：沒問題，我已經把書
+        <span class="vocab" data-pinyin="zhěng lǐ" data-meaning="to tidy up">
+         <a href="vocab-practice.html#整理">整理</a>
+        </span>
+        好了，
+        <span class="grammar" data-meaning="V一下：V for a while">
+         <a href="grammar-practice.html# V yī xià">等一下</a>
+        </span>
+        幫你搬
+        <span class="vocab" data-pinyin="xiāng zi" data-meaning="box">
+         <a href="vocab-practice.html#箱子">箱子</a>
+        </span>
+        。</p>
+      <p>媽媽：
+        <span class="vocab" data-pinyin="xīn kǔ" data-meaning="hard; tiring">
+         <a href="vocab-practice.html#辛苦">辛苦</a>
+        </span>
+        你了！
+        <span class="vocab" data-pinyin="bān jiā" data-meaning="to move (house)">
+         <a href="vocab-practice.html#搬家">搬家</a>
+        </span>
+        雖然累，但新生活一定會很
+        <span class="vocab" data-pinyin="yǒu qù" data-meaning=" interesting">
+         <a href="vocab-practice.html#有趣">有趣</a>
+        </span>
+        。</p>
+      <p>明明：我也這麼覺得。我們可以
+        <span class="vocab" data-pinyin="kāi shǐ" data-meaning="to start">
+         <a href="vocab-practice.html#開始">開始</a>
+        </span>
+        新的生活了！</p>
+       `, 
+      fest2: `
+      <h2>週末大掃除</h2>
+      <p>爸爸：麗麗，今天是星期六，我們來
+        <span class="vocab" data-pinyin="dǎ sǎo" data-meaning="to clean">
+         <a href="vocab-practice.html#打掃">打掃</a>
+        </span>
+        一下房子吧！</p>
+      <p>麗麗：好啊！我先把我的
+        <span class="vocab" data-pinyin="shū zhuō" data-meaning="desk">
+         <a href="vocab-practice.html#書桌">書桌</a>
+        </span>
+        整理好。</p>
+      <p>爸爸：謝謝你。我去
+        <span class="vocab" data-pinyin="sǎo dì" data-meaning="to sweep">
+         <a href="vocab-practice.html#掃地">掃地</a>
+        </span>
+        和
+        <span class="vocab" data-pinyin="tuō dì" data-meaning="to mop the floor">
+         <a href="vocab-practice.html#拖地">拖地</a>
+        </span>
+        。媽媽去陽台洗衣服了。</p>
+      <p>爸爸：當然可以！你
+        <span class="grammar" data-meaning="越來越...：more and more …">
+         <a href="grammar-practice.html#yuè lái yuè...">越來越</a>
+        </span>
+        會做
+        <span class="vocab" data-pinyin="jiā shì" data-meaning="housework">
+         <a href="vocab-practice.html#家事">家事</a>
+        </span>
+        了。</p>
+      <p>麗麗：因為我想讓家裡看起來更乾淨。</p>
+      <p>爸爸：我們
+        <span class="grammar" data-meaning="先...再...：first…then…">
+         <a href="grammar-practice.html#xiān...zài...">先</a>
+        </span>
+        整理，
+        <span class="grammar" data-meaning="先...再...：first…then…">
+         <a href="grammar-practice.html#xiān...zài...">再</a>
+        </span>
+        一起去買午餐，怎麼樣？</p>
+      <p>麗麗：太好了！我想吃
+        <span class="vocab" data-pinyin="niú ròu miàn" data-meaning="beef noodles">
+         <a href="vocab-practice.html#牛肉麵">牛肉麵</a>
+        </span>
+        。</p>
+      <p>爸爸：打掃完就
+        <span class="vocab" data-pinyin="chū mén" data-meaning="to go out">
+         <a href="vocab-practice.html#出門">出門</a>
+        </span>
+        ！</p>
+
+       `, 
+
+      fest3: `
+       `,
+
+      fest4: ` 
+       `,
+
+      fest5: `
+       `,
+
+      fest6: `
+       `, 
+       
+      fest7: `
+       `, 
+
+      fest8: `
+       `, 
+
+      fest9: `
+       `,
+
+      fest10: `
+       `,
+      };
+      const sidebar = document.getElementById('sidebar-nav');
+    const content = document.getElementById('content');
+
+    sidebar.addEventListener('click', e => {
+      const link = e.target.closest('a[data-topic]');
+      if (!link) return;
+      e.preventDefault();
+
+      // 切換 active 樣式
+      sidebar.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+
+      const key = link.dataset.topic;
+      content.innerHTML = contentMap[key] || '<p>此主題尚未有內容。</p>';
+    });
+  </script>
 </body>
 </html>

@@ -26,7 +26,7 @@
       <!-- 側邊欄：主題列表放左側 -->
       <aside class="sidebar">
         <h2>社會議題</h2>
-        <nav class="subtopics-nav">
+        <nav id="sidebar-nav" class="subtopics-nav">
           <a href="short1.html">春節</a>
           <a href="short2.html">元宵節</a>
           <a href="short3.html">清明節</a>
@@ -49,5 +49,25 @@
   <footer>
     <p>&copy; 2025 遇見華語｜版權所有</p>
   </footer>
+  <script>
+    // 各主題對應的課文內容
+    const contentMap = {
+    }; 
+      const sidebar = document.getElementById('sidebar-nav');
+    const content = document.getElementById('content');
+
+    sidebar.addEventListener('click', e => {
+      const link = e.target.closest('a[data-topic]');
+      if (!link) return;
+      e.preventDefault();
+
+      // 切換 active 樣式
+      sidebar.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+
+      const key = link.dataset.topic;
+      content.innerHTML = contentMap[key] || '<p>此主題尚未有內容。</p>';
+    });
+  </script>
 </body>
 </html>

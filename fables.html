@@ -26,22 +26,22 @@
       <!-- 側邊欄：主題列表放左側 -->
       <aside class="sidebar">
         <h2>寓言故事</h2>
-        <nav class="subtopics-nav">
-          <a href="short1.html">主題 1</a>
-          <a href="short2.html">主題 2</a>
-          <a href="short3.html">主題 3</a>
-          <a href="short4.html">主題 4</a>
-          <a href="short5.html">主題 5</a>
-          <a href="short6.html">主題 6</a>
-          <a href="short7.html">主題 7</a>
-          <a href="short8.html">主題 8</a>
-          <a href="short9.html">主題 9</a>
-          <a href="short10.html">主題 10</a>
+        <nav id="sidebar-nav" class="subtopics-nav">
+        <a href="#" data-topic="fest1">狐狸和葡萄</a>
+        <a href="#" data-topic="fest2">烏龜和兔子</a>
+        <a href="#" data-topic="fest3">狼和小羊</a>
+        <a href="#" data-topic="fest4">農夫和下金蛋的鵝</a>
+        <a href="#" data-topic="fest5">小鳥學飛</a>
+        <a href="#" data-topic="fest6">烏鴉和狐狸</a>
+        <a href="#" data-topic="fest7">螞蟻和夏天的故事</a>      
+        <a href="#" data-topic="fest8">小孩和狼</a>
+        <a href="#" data-topic="fest9">獅子和老鼠</a>
+        <a href="#" data-topic="fest10">公雞和寶石</a>
         </nav>
       </aside>
       <!-- 內容區：中間顯示課文 -->
-      <section class="content">
-        <!-- 這裡放置對應的課文內容 -->
+      <section id="content" class="content">
+        <h2>請從左側選擇一個主題</h2>
       </section>
     </div>
   </main>
@@ -49,5 +49,110 @@
   <footer>
     <p>&copy; 2025 遇見華語｜版權所有</p>
   </footer>
+  <script>
+    // 各主題對應的課文內容
+    const contentMap = {
+      fest1: `
+      <h2>狐狸和葡萄</h2>
+      <p>有一天，一隻
+        <span class="vocab" data-pinyin="hú lí" data-meaning="fox">
+         <a href="vocab-practice.html#狐狸">狐狸</a>
+        </span>
+        走在
+        <span class="vocab" data-pinyin="sēn lín" data-meaning="forest">
+         <a href="vocab-practice.html#森林">森林</a>
+        </span>
+        裡。
+        <span class="vocab" data-pinyin="tā" data-meaning="third person referring to animals">
+         <a href="vocab-practice.html#牠">牠</a>
+        </span>
+        肚子很餓， 
+        <span class="vocab" data-pinyin="dào chù" data-meaning="everywhere">
+         <a href="vocab-practice.html#到處">到處</a>
+        </span>
+        找東西吃。
+        <span class="vocab" data-pinyin="hū rán" data-meaning="suddenly">
+         <a href="vocab-practice.html#忽然">忽然</a>
+        </span>
+        ，
+        <span class="vocab" data-pinyin="tā" data-meaning="third person referring to animals">
+         <a href="vocab-practice.html#牠">牠</a>
+        </span>
+        看到一串又大又
+        <span class="vocab" data-pinyin="zǐ" data-meaning="purple">
+         <a href="vocab-practice.html#紫">紫</a>
+        </span>
+        的
+        <span class="vocab" data-pinyin="pú táo" data-meaning="grape">
+         <a href="vocab-practice.html#葡萄">葡萄</a>
+        </span>
+        ，掛在高高的樹上。
+        <span class="vocab" data-pinyin="hú lí" data-meaning="fox">
+         <a href="vocab-practice.html#狐狸">狐狸</a>
+        </span>
+        想：「這些
+        <span class="vocab" data-pinyin="pú táo" data-meaning="grape">
+         <a href="vocab-practice.html#葡萄">葡萄</a>
+        </span>
+        一定很好吃。」</p>
+      <p>
+        <span class="vocab" data-pinyin="tā" data-meaning="third person referring to animals">
+         <a href="vocab-practice.html#牠">牠</a>
+        </span>
+        跳了一次，沒有跳到。又跳第二次，還是
+        <span class="vocab" data-pinyin="chā yī diǎn" data-meaning="almost">
+         <a href="vocab-practice.html#差一點">差一點</a>
+        </span>
+        。
+        <span class="vocab" data-pinyin="hú lí" data-meaning="fox">
+         <a href="vocab-practice.html#狐狸">狐狸</a>
+        </span>
+        越來越生氣，心想：「為什麼我吃不到？」
+        <span class="vocab" data-pinyin="tā" data-meaning="third person referring to animals">
+         <a href="vocab-practice.html#牠">牠</a>
+        </span>
+        又試了一次，還是沒
+        <span class="vocab" data-pinyin="chéng gōng" data-meaning="success">
+         <a href="vocab-practice.html#成功">成功</a>
+        </span>
+        。最後，
+        <span class="vocab" data-pinyin="hú lí" data-meaning="fox">
+         <a href="vocab-practice.html#狐狸">狐狸</a>
+        </span>
+        說：「這些
+        <span class="vocab" data-pinyin="pú táo" data-meaning="grape">
+         <a href="vocab-practice.html#葡萄">葡萄</a>
+        </span>
+        一定很酸，我才不要吃呢！」</p>
+      <p>說完，牠就走開了。
+        <span class="vocab" data-pinyin="	qí shí" data-meaning="actually">
+         <a href="vocab-practice.html#其實">其實</a>
+        </span>
+        <span class="vocab" data-pinyin="hú lí" data-meaning="fox">
+         <a href="vocab-practice.html#狐狸">狐狸</a>
+        </span>
+        很想吃，但
+        <span class="vocab" data-pinyin="tā" data-meaning="third person referring to animals">
+         <a href="vocab-practice.html#牠">牠</a>
+        </span>
+        怕別人知道自己做不到。</p>
+       `, 
+    };
+      const sidebar = document.getElementById('sidebar-nav');
+    const content = document.getElementById('content');
+
+    sidebar.addEventListener('click', e => {
+      const link = e.target.closest('a[data-topic]');
+      if (!link) return;
+      e.preventDefault();
+
+      // 切換 active 樣式
+      sidebar.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+
+      const key = link.dataset.topic;
+      content.innerHTML = contentMap[key] || '<p>此主題尚未有內容。</p>';
+    });
+  </script>
 </body>
 </html>

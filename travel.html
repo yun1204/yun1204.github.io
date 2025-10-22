@@ -27,20 +27,20 @@
       <aside class="sidebar">
         <h2>旅遊</h2>
         <nav id="sidebar-nav" class="subtopics-nav">
-          <a href="short1.html">主題 1</a>
-          <a href="short2.html">主題 2</a>
-          <a href="short3.html">主題 3</a>
-          <a href="short4.html">主題 4</a>
-          <a href="short5.html">主題 5</a>
-          <a href="short6.html">主題 6</a>
-          <a href="short7.html">主題 7</a>
-          <a href="short8.html">主題 8</a>
-          <a href="short9.html">主題 9</a>
-          <a href="short10.html">主題 10</a>
+          <a href="#" data-topic="fest1">第一次坐飛機</a>
+          <a href="#" data-topic="fest2">訂飯店</a>
+          <a href="#" data-topic="fest3">問路</a>
+          <a href="#" data-topic="fest4">清明節</a>
+          <a href="#" data-topic="fest5">端午節</a>
+          <a href="#" data-topic="fest6">中元節</a>
+          <a href="#" data-topic="fest7">中秋節</a>      
+          <a href="#" data-topic="fest8">冬至</a>
+          <a href="#" data-topic="fest9">七夕</a>
+          <a href="#" data-topic="fest10">228紀念日</a>
         </nav>
       </aside>
       <!-- 內容區：中間顯示課文 -->
-      <section class="content">
+      <section id="content" class="content">
         <!-- 這裡放置對應的課文內容 -->
       </section>
     </div>
@@ -52,6 +52,151 @@
   <script>
     // 各主題對應的課文內容
     const contentMap = {
+      fest1:`
+      <h2>第一次坐飛機</h2>
+      <p>我以前沒
+        <span class="vocab" data-pinyin="dā" data-meaning="to take (a ride); to build; to put up; to join">
+         <a href="vocab-practice.html#搭">搭</a>
+        </span>
+        過飛機，這次去日本旅行，是我第一次
+        <span class="vocab" data-pinyin="chū guó" data-meaning="go abroad">
+         <a href="vocab-practice.html#出國">出國</a>
+        </span>
+        。早上，我
+        <span class="grammar" data-meaning="把：把字句">
+         <a href="grammar-practice.html#ba-structure">把</a>
+        </span>
+        <span class="vocab" data-pinyin="hù zhào" data-meaning="passport">
+         <a href="vocab-practice.html#護照">護照</a>
+        </span>
+        和機票放進背包，叫計程車去機場。機場裡人很多，有的在
+        <span class="vocab" data-pinyin="pái duì" data-meaning="queue up">
+         <a href="vocab-practice.html#排隊">排隊</a>
+        </span>
+        ，有的在吃早餐。我
+        <span class="vocab" data-pinyin="tōng guò" data-meaning="pass through">
+         <a href="vocab-practice.html#通過">通過</a>
+        </span>
+        安檢後，找到登機門，心裡有一點緊張。</p>
+      <p>飛機
+        <span class="vocab" data-pinyin="qǐ fēi" data-meaning="takeoff">
+         <a href="vocab-practice.html#起飛">起飛</a>
+        </span>
+        的時候，我看著窗外的雲，覺得很新奇。空服員笑著送來
+        <span class="vocab" data-pinyin="yǐn liào" data-meaning="beverage">
+         <a href="vocab-practice.html#飲料">飲料</a>
+        </span>
+        和點心，讓我覺得很舒服。我
+        <span class="grammar" data-meaning="一邊...一邊...：do … while …">
+         <a href="grammar-practice.html#yi bian-yi bian">一邊</a>
+        </span>
+        聽音樂，
+        <span class="grammar" data-meaning="一邊...一邊...：do … while …">
+         <a href="grammar-practice.html#yi bian-yi bian">一邊</a>
+        </span>
+        看風景，
+        <span class="vocab" data-pinyin="xīn qíng" data-meaning="mood">
+         <a href="vocab-practice.html#心情">心情</a>
+        </span>
+        越來越好。飛機飛了三個多小時才到東京，我
+        <span class="vocab" data-pinyin="pāi" data-meaning="filming">
+         <a href="vocab-practice.html#拍">拍</a>
+        </span>
+        了很多照片，想跟朋友
+        <span class="vocab" data-pinyin="fēn xiǎng" data-meaning="share">
+         <a href="vocab-practice.html#分享">分享</a>
+        </span>
+        。</p>
+      <p>一下飛機，導遊就叫我們集合，準備
+        <span class="vocab" data-pinyin="dā" data-meaning="to take (a ride); to build; to put up; to join">
+         <a href="vocab-practice.html#搭">搭</a>
+        </span>
+        車去飯店。飯店
+        <span class="grammar" data-meaning="不但…而且：not only … but also">
+      <a href="grammar-practice.html#budan-erqie">而且</a>
+        </span>
+        乾淨，
+        <span class="grammar" data-meaning="不但…而且：not only … but also">
+      <a href="grammar-practice.html#budan-erqie">而且</a>
+        </span>
+        離地鐵站很近。放好
+        <span class="vocab" data-pinyin="xíng lǐ" data-meaning="luggage">
+         <a href="vocab-practice.html#行李">行李</a>
+        </span>
+        後，我們去附近吃午餐，有拉麵、壽司和炸雞。我覺得這次旅行很有意思，也想再去別的國家看看。</p>
+      `,
+      fest2:`
+      <h2>訂飯店</h2>
+      <p>我們這次去台中旅行，事先在手機上預訂了一家旅館。這家旅館的
+        <span class="vocab" data-pinyin="dì diǎn" data-meaning="location">
+         <a href="vocab-practice.html#地點">地點</a>
+        </span>
+        很好，附近有公園和
+        <span class="vocab" data-pinyin="biàn lì" data-meaning="convenient">
+         <a href="vocab-practice.html#便利">便利</a>
+        </span>
+        商店。我們一到
+        <span class="vocab" data-pinyin="guì tái" data-meaning="counter">
+         <a href="vocab-practice.html#櫃檯">櫃檯</a>
+        </span>
+        ，就辦理入住手續。
+        <span class="vocab" data-pinyin="fú wù" data-meaning="service">
+         <a href="vocab-practice.html#服務">服務</a>
+        </span>
+        人員
+        <span class="vocab" data-pinyin="tài dù" data-meaning="attitude">
+         <a href="vocab-practice.html#態度">態度</a>
+        </span>
+        很好，還給我們一張地圖，介紹附近的景點。我們住在五樓，
+        <span class="grammar" data-meaning="可以：can">
+     <a href="grammar-practice.html#kě yǐ">可以</a>
+        </span>
+        搭電梯上去。</p>
+      <p>房間
+        <span class="grammar" data-meaning="不但...還...：not only... but also...">
+     <a href="grammar-practice.html#bù dàn...huán...">不但</a>
+        </span>
+        有冷氣，
+        <span class="grammar" data-meaning="不但...還...：not only... but also...">
+     <a href="grammar-practice.html#bù dàn...huán...">還</a>
+        </span>
+        有熱水和網路。
+        <span class="vocab" data-pinyin="yù shì" data-meaning="bathroom">
+         <a href="vocab-practice.html#浴室">浴室</a>
+        </span>
+        裡放著乾淨的
+        <span class="vocab" data-pinyin="máo jīn" data-meaning="towel">
+         <a href="vocab-practice.html#毛巾">毛巾</a>
+        </span>
+        ，床單也洗得很白。我檢查了一下，覺得房間
+        <span class="vocab" data-pinyin="zhěng lǐ" data-meaning="organize">
+         <a href="vocab-practice.html#整理">整理</a>
+        </span>
+        得很乾淨。朋友問我：「這間旅館怎麼樣？」我說：「太舒服了！」我們放好行李後，休息了一下，準備開始今天的行程。</p>
+      <p>早上我們吃了旅館
+        <span class="vocab" data-pinyin="tí gōng" data-meaning="supply">
+         <a href="vocab-practice.html#提供">提供</a>
+        </span>
+        的早餐，有麵包、果汁和水果。我以前
+        <span class="grammar" data-meaning="V過：express experience">
+     <a href="grammar-practice.html#Vguò">住過</a>
+        </span>
+        幾家旅館，這家真的不錯。吃完早餐，我們看了一下地圖，決定先去
+        <span class="vocab" data-pinyin="bó wù guǎn" data-meaning="museum">
+         <a href="vocab-practice.html#博物館">博物館</a>
+        </span>
+        。旅行時住得舒服，心情也會變得更好。</p>
+      `,
+      fest3:`
+      <h2>問路</h2>
+      <p>今天早上，我在首爾市中心
+        <span class="vocab" data-pinyin="mí lù" data-meaning="lost">
+         <a href="vocab-practice.html#迷路">迷路</a>
+        </span>
+        了。本來想走去地鐵站，結果走錯方向了。我看著手機裡的地圖，可是怎麼看都不太清楚。後來我決定問路。我走進一家便利商店，叫店員幫我看看怎麼走。他一邊聽我說，一邊笑著畫地圖給我。</p>
+      <p>他說：「你一出門就往右轉，走到第二個紅綠燈，再看到銀行的時候左轉。地鐵站就在那裡。」我照著他的話走，真的找到了地鐵站。站裡有很多乘客，有的站著，有的坐著等車。除了自動售票機以外，還有服務人員可以幫忙。</p>
+      <p>我買了票，走下樓梯，到了月台。電扶梯旁邊有清楚的標示，告訴我哪一邊是出口。我以前沒來過這一站，覺得這裡越來越方便。這次雖然迷路了，但也學到怎麼問路和看標示，真是一個特別的經驗。</p>
+      `,
     };
       const sidebar = document.getElementById('sidebar-nav');
     const content = document.getElementById('content');
